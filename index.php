@@ -39,18 +39,19 @@
         while($pel = mysqli_fetch_array($query)){ // while adalah contoh perulangan yang tak terhitung
                                                   // mysqli_fetch_array berfungsi untuk mengambil data
                                                   // variable pel berisi data data yang diambil dari variable query
-            echo "<tr>";
-            echo "<td>".$pel['id_pelanggan']."</td>";
-            echo "<td>".$pel['nama_pelanggan']."</td>";   
-            echo "<td>".$pel['alamat']."</td>";
-            echo "<td>".$pel['telepon']."</td>";
-            echo "<td>".$pel['email']."</td>";
-            echo "<td>";
-            echo "<a class='btn btn-warning' href='edit.php?id_pelanggan=".$pel['id_pelanggan']."'>Edit</a> | ";
-            echo "<a class='btn btn-danger' href='delete.php?id_pelanggan=".$pel['id_pelanggan']."'>Hapus</a>";
-            echo "</td>";
-            echo "</tr>";
+            echo "<tr>
+                 <td>$pel[id_pelanggan]</td>
+                 <td>$pel[nama_pelanggan]</td>   
+                 <td>$pel[alamat]</td>
+                 <td>$pel[telepon]</td>
+                 <td>$pel[email]</td>
+                 <td>
+                 <a class='btn btn-warning' href='edit.php?id_pelanggan=".$pel['id_pelanggan']."'>Edit</a> |
+                 <a class='btn btn-danger' href='delete.php?id_pelanggan=".$pel['id_pelanggan']."'>Hapus</a>
+                 </td>
+                 </tr>";
             // echo berfungsi untuk menyetak data 
+            // titik (.) pada tag <a> line 49 & 50 berfungsi untuk menyambungkan $pel yang ada di perulangan. mengapa memerlukan (.) sedangkan yang lain seperti <td> tidak? karena kita menaruh perulangan $pel diluar tag <td> tetapi di dalam </td>, tetapi di tag <a> line 49 & 50 kita perlu menaruh perulangan $pel didalam tag <a> didalam href. apabila tidak menggunakan titik (.) maka akan terjadi error karena nantinya $pel akan tidak teridentifikasi sebagai perulangan
         }
         ?>
         </tbody>

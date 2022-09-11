@@ -35,17 +35,15 @@
             </div>
             <div class="row mt-4">
                 <div class="col-6"><label class="form-label">Alamat : </label>
-                    <textarea style="height: 100px;" class="form-control"
+                    <textarea style="height: 105px;" class="form-control"
                         name="alamat"><?php echo $pel['alamat']?></textarea></div>
                 <div class="col-6">
-                    <div class="row">
-                        <div class="col-6"><label class="form-label">Telepon : </label>
+                        <div><label class="form-label">Telepon : </label>
                             <input class="form-control" type="number" value="<?php echo $pel['telepon']?>"
                                 name="telepon"></div>
-                        <div class="col-6"><label class="form-label">Email : </label>
+                        <div><label class="form-label">Email : </label>
                             <input class="form-control" type="email" value="<?php echo $pel['email']?>" name="email">
                         </div>
-                    </div>
                 </div>
             </div>
             <!-- value adalah isi dari sebuah input
