@@ -2,7 +2,7 @@
     $host = "localhost"; // phpmyadmin
     $user = "root"; // root = username default localhost
     $password = ""; // kosongkan jika phpmyadmin tidak ada password
-    $database = "db_pelanggan"; // nama database
+    $database = "db_karyawan"; // nama database
     $connect = mysqli_connect($host,$user,$password,$database) or die ('Gagal Menghubungkan')
     // $connect mengambil semua variable host,user,password,database
     // mysqli_connect berfungsi untuk menghubungkan project ke phpmyadmin
